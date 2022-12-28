@@ -52,7 +52,7 @@ export default {
       type: String,
       default: 'add'
     },
-    labelBtnWidth:{
+    mainBtnWidth:{
       type: String,
       default: "100px"
     },
@@ -161,7 +161,7 @@ export default {
         zIndex: this.zIndex,
         background: this.mainBtnColor,
         boxShadow: this.shadow ? '0px 2px 8px #666' : '',
-        width: this.labelBtnWidth 
+        width: this.mainBtnWidth 
       }
     },
     // 是否无需改变隐藏状态
