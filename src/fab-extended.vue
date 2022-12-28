@@ -358,10 +358,6 @@ export default {
     justify-content: flex-start;
   }
 
-  .fab-cantainer-extended .fabMask{    
-    border-radius: 25px;
-  }
-
 .vue-fab-extended-icons {
   position: relative;
   width: initial;

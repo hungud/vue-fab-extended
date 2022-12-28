@@ -59,4 +59,9 @@ export default {
 .touchStyle {
   opacity: .2 !important;
 }
+
+  .fab-cantainer-extended .fabMask{    
+    border-radius: 25px;
+  }
+  
 </style>
