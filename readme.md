@@ -1,9 +1,8 @@
 # Vue Floating Action Button
 
-&&这是一个Vue2.0的仓库&&
+### support material icons
 
 ##### ❤❤❤❤ a beautiful Floating Action Button ❤❤❤❤
-##### 支持iconfont以及material icons
 <p align="center">
 	<a href="https://www.npmjs.com/package/vue-float-action-button">
 		<img src="https://img.shields.io/npm/dm/vue-float-action-button.svg" alt="Monthly downloads">
@@ -22,30 +21,29 @@
   </a>
 </p>
 
+![8.gif](http://upload-images.jianshu.io/upload_images/5738345-8348ec8f54f0d160.gif?imageMogr2/auto-orient/strip)
+
+![7.gif](http://upload-images.jianshu.io/upload_images/5738345-a13b5b7b511f8484.gif?imageMogr2/auto-orient/strip)
+
 **[Demo](https://vue-fab.github.io/)**
 
 **[homepage and document](https://a62527776a.github.io/)**
 
-**[English Doc](https://github.com/a62527776a/vue-floating-action-button/blob/master/readme.en.md)**
-
 **[demo代码](https://github.com/a62527776a/vue-floating-action-button/blob/master/demo/App.vue)**
-
-![8.gif](http://upload-images.jianshu.io/upload_images/5738345-8348ec8f54f0d160.gif?imageMogr2/auto-orient/strip)
-
-![7.gif](http://upload-images.jianshu.io/upload_images/5738345-a13b5b7b511f8484.gif?imageMogr2/auto-orient/strip)
 
 
 ***
 
 ## Features
 
-* **支持多种动画**
-* **支持滚动/手势自动显示/隐藏**
-* **支持Material Design ICON**
-* **支持阿里巴巴iconfont.cn**
-* **支持点击空白处自动隐藏**
-* **动画流畅复刻Material Design**
-* **0依赖 体积小 min + gzip打包后 仅5.8KB**
+* **Support multiple animations**
+* **Support scrolling/gestures to show/hide automatically**
+* **Support Material Design ICON**
+* **Support Alibaba iconfont.cn**
+* **Support click on the blank space to automatically hide**
+* **Smooth animation reproduction Material Design**
+* **0 dependency Small size min + gzip packaged only 5.8KB**
+
 
 ***
 
@@ -63,7 +61,7 @@ import Vue from 'vue'
 
 Vue.use(VueFab, /* {
   ----------------------
-  // opitons 可选iconfont图标或MaterialIcons
+  // opitons Optional Alibaba iconfont icon or MaterialIcons
   iconType: 'MaterialDesign'
   // iconType: 'iconfont'
 } */)
@@ -73,8 +71,8 @@ new Vue({
 }).$mount('#app')
 ```
 
-本组件支持两种图标 
-一种为 Material Design 的图标 需要在网页中引入
+This component supports two icons
+A material design icon needs to be introduced in the web page
 ```
 // index.html
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -87,9 +85,10 @@ new Vue({
 </vue-fab>
 
 ``` 
-所有ICON皆可从 https://material.io/icons/ 中查找
 
-如使用**阿里巴巴矢量图标库** https://www.iconfont.cn 则按提示引入
+All ICONs can be found from https://material.io/icons/
+
+If you use **Alibaba Vector Icon Library** https://www.iconfont.cn, follow the prompts to import
 ```
 <vue-fab icon="icon-jia" 
   fabItemAnimate="default" 
@@ -103,8 +102,7 @@ new Vue({
 </vue-fab>
 ```
 
-#### Vue-Fab在底层已抹平两者使用区别 引入后仅需使用icon属性传入即可
-
+#### Vue-Fab has smoothed out the difference between the two in the bottom layer. After introduction, only use the icon attribute to pass in.
 
 ***
 
@@ -157,18 +155,19 @@ new Vue({
 
 ***
 
+
 # API
 
 ## options
 
 | Option |  Type  | Params | Description |
 | ------ | --------  | ------ | ----------  |
-|  iconType  | String |'MaterialDesign'/'iconfont' |  根据您的使用习惯或开发依赖来决定使用哪种图标     |
+|  iconType  | String |'MaterialDesign'/'iconfont' |  Decide which icon to use based on your usage habits or development dependencies |
 
 ```
 Vue.use(VueFab, /* {
   ----------------------
-  // opitons 可选iconfont图标或MaterialIcons
+  // opitons Optional iconfont icon or MaterialIcons
   iconType: 'MaterialDesign'
   // iconType: 'iconfont'
 } */)
@@ -180,32 +179,32 @@ Vue.use(VueFab, /* {
 
 | Option |  Type  |  Default  | Params | Description |
 | ------ | ------ | --------  | ------ | ----------  |
-|  iconType  | String |  'MaterialDesign' | 'MaterialDesign'/'iconfont' |  根据您的使用习惯或开发依赖来决定使用哪种图标     |
-| autoHideDirection | String | 'up' | 'up' / 'down' | 滚动自动隐藏的方向控制，默认值up为向下展示向上隐藏down值为向上展示向下隐藏 |
-| unfoldDirection | String | 'up' | 'up' / 'down' | 展开方向，向上或者向下 |
-|  icon  | String |  'add' | / |  未激活的icon     |
-| activeIcon | String | 'add' | / | 激活后的icon |
-| size | String | 'Normal' | 'big' / 'normal' / 'small' | 主Fab的尺寸 子菜单会随之变化 |
-|mainBtnColor|String|'#E64C3B'| / | 主按钮颜色|
-|hidden| Boolean | true | true / false | 是否隐藏Fab |
-|fabAnimateBezier | String | linear | 'ease' / 'linear' / 'ease-in' / 'ease-out' / 'ease-in-out' / '.18,.89,.91,.17' | 主按钮显示消失(hidden)的贝塞尔曲线 如填入贝塞尔曲线 直接填入'n,n,n,n'或'liner'  |
-| z-index|Number|5 | / |fab的层级|
-| shadow | Boolean | true | true / false | 主button的阴影|
-| clickAutoClose| Boolean | true | true / false | 点击子菜单项后是否关闭菜单 |
-| scrollAutoHide | Boolean | true | true / false | 滚动是否触发自动隐藏 (PC端和Mobile端实现方式有所不同 分别根据scroll事件和touchmove事件实现) |
-| autoHideThreshold | Number | 10 | / | 滚动触发自动隐藏的阈值 单位px |
-| fabAutoHideAnimateModel | String | 'alive' | 'default' / 'alive' | fab滚动触发自动隐藏动画 分为 'default' ( 缩小隐藏 ) 以及 'alive' (向下滚动隐藏) |
-| fabItemAnimate | String | 'default' | 'default' / 'alive' | 打开关闭子菜单时过渡动画 分为 'default' (各自过渡) 'alive' (分裂过渡) |
-| fabAliveAnimateBezier | String' | '.16,1.01,.61,1.2' | 'ease' / 'linear' / 'ease-in' / 'ease-out' / 'ease-in-out' / '.18,.89,.91,.17' | 子菜单列表在alive动画模式下的贝塞尔曲线 注：仅fabMenuAnimate为alive时生效 |
-| globalOptions | Object | {spacing: 40, delay: 0.05} | / | 每个fab-item的动画延迟和间距 |
-* **delay**: 菜单项淡入淡出的延迟差 为上一个菜单项加该延迟的延迟(单位 s) (fabItemAnimate为alive情况下该值会自动 除以 3)
-* **spacing** 每个菜单项的间距 单位 px
+|  iconType  | String |  'MaterialDesign' | 'MaterialDesign'/'iconfont' |  Decide which icon to use based on your usage habits or development dependencies     |
+| autoHideDirection | String | 'up' | 'up' / 'down' | Rolling auto-hiding direction control, default value up to show up to hide down value to show up to hide down value |
+| unfoldDirection | String | 'up' | 'up' / 'down' | Expanding direction, up or down |
+|  icon  | String |  'add' | / |  Inactive icon     |
+| activeIcon | String | 'add' | / | Activated icon |
+| size | String | 'Normal' | 'big' / 'normal' / 'small' | The size of the main Fab will change with the submenu. |
+|mainBtnColor|String|'#E64C3B'| / | Main button color|
+|hidden| Boolean | true | true / false | Whether to hide Fab |
+|fabAnimateBezier | String | linear | 'ease' / 'linear' / 'ease-in' / 'ease-out' / 'ease-in-out' / '.18,.89,.91,.17' | The main button shows the hidden Bezier curve. Fill in the Bezier curve and fill in 'n, n, n, n' or 'liner' directly.  |
+| z-index|Number|5 | / |Fab level|
+| shadow | Boolean | true | true / false | Main button shadow|
+| clickAutoClose| Boolean | true | true / false | Whether to close the menu after clicking the submenu item |
+| scrollAutoHide | Boolean | true | true / false | Whether scrolling triggers auto-hiding (the PC side and the mobile side are implemented differently according to the scroll event and the touchmove event respectively) |
+| autoHideThreshold | Number | 10 | / | Scroll triggered auto-hidden threshold unit px |
+| fabAutoHideAnimateModel | String | 'alive' | 'default' / 'alive' | Fab scrolling triggers auto-hide animations into 'default' (reduce hidden) and 'alive' (scroll down) |
+| fabItemAnimate | String | 'default' | 'default' / 'alive' | Transition animation when opening the close submenu is divided into 'default' (respectively) 'alive' (split transition) |
+| fabAliveAnimateBezier | String' | '.16,1.01,.61,1.2' | 'ease' / 'linear' / 'ease-in' / 'ease-out' / 'ease-in-out' / '.18,.89,.91,.17' | Sub-menu list Bezier curve in alive animation mode Note: Only when fabMenuAnimate is alive |
+| globalOptions | Object | {spacing: 40, delay: 0.05} | / | Animation delay and spacing for each fab-item |
+* **delay**: The delay difference between the fade in and out of the menu item is the delay (in s) of the delay for the previous menu item (the value is automatically divided by 3 when the fabItemAnimate is alive)
+* **spacing** Spacing of each menu item Unit px
 
 ## Methods
 
 | Name | Param | Type | Default | Description |
 | ---- |   -------- | ------- | ------- | ----------- |
-| onOffFab | True / False | Boolean | True | 显示或者隐藏Fab |
+| onOffFab | True / False | Boolean | True | Show or hide Fab |
 
 **fab-item API**
 
@@ -213,28 +212,27 @@ Vue.use(VueFab, /* {
 
 | Option |  Type  |  Default  | Params | Description |
 | ------ | ------ | --------  | ------ | ----------  |
-| idx | Number | 0 | / | 下标 决定了位置以及clickItem事件返回的值(必须) |
-| title | String | '' | / | 菜单项标题 如果不填 将不显示title框 |
+| idx | Number | 0 | / | The subscript determines the position and the value returned by the clickItem event (required) |
+| title | String | '' | / | Menu item title If not filled, the title box will not be displayed. |
 | icon | String | 'add' | / | Submenu item icon Supports [Material Icon] (https://material.io/icons/) and [iconfont](https://www.iconfont.cn/) icon |
-| color | String | '#FFF' | / | 支持css颜色标准 默认为白色 不填写该值将自动拥有一个值为0px 2px 8px #666的阴影 |
-| titleColor| String | #666 | / | 子菜单标题字体颜色 |
-| titleBgColor | String | #FFF | / | 子菜单背景颜色 |
+| color | String | '#FFF' | / | Support for css color standard Default to white Do not fill in this value will automatically have a shadow with a value of 0px 2px 8px #666 |
+| titleColor| String | #666 | / | Submenu title font color |
+| titleBgColor | String | #FFF | / | Submenu background color |
 
 ## Event
 
 |    Name   |   Param   | Description |
 | ----      | -------   | ----------- |
-| clickItem | {idx} | 当菜单项不为空且点击菜单项时，会返回该菜单项传入的idx值 |
+| clickItem | {idx} | When the menu item is not empty and the menu item is clicked, the idx value passed in the menu item is returned. |
 
 ## 
 
 
-## 注意
+## Note
 
-* 由于safari浏览器的事件传递机制 window、document、body 不响应click事件**
-  如若出现**点击空白区域无法自动关闭子菜单的情况** 请检查html高度是否100% 
-  如果没有100% 请单独给html标签设置css属性 min-height: 100%
-  项目对safari浏览器做了单独处理 在safari浏览器中将点击事件挂载在了HTML标签上，除iOS系统外的浏览器挂载在window上
+Due to safari's event delivery mechanism window, document, body does not respond to click eventsIf clicks on a blank area and the submenu cannot be automatically closed ** Please check if the html height is 100%
+   If there is no 100%, please set the css attribute to the html tag separately min-height: 100%
+   The project handles the safari browser separately. In the safari browser, the click event is mounted on the HTML tag, and the browser other than the iOS system is mounted on the window.
 
 ***
 ## LICENSE
