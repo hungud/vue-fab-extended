@@ -52,6 +52,10 @@ export default {
       type: String,
       default: 'add'
     },
+    labelBtnWidth:{
+      type: String,
+      default: "100px"
+    },
     mainBtnColor: {
       type: String,
       default: '#E64C3B'
@@ -156,7 +160,8 @@ export default {
         transitionTimingFunction: /,/.test(this.fabAnimateBezier) ? `cubic-bezier(${this.fabAnimateBezier})` : this.fabAnimateBezier,
         zIndex: this.zIndex,
         background: this.mainBtnColor,
-        boxShadow: this.shadow ? '0px 2px 8px #666' : ''
+        boxShadow: this.shadow ? '0px 2px 8px #666' : '',
+        width: this.labelBtnWidth 
       }
     },
     // 是否无需改变隐藏状态
@@ -329,7 +334,7 @@ export default {
     box-sizing: border-box;
     .flex-center();
     .absolute();
-    border-radius: 25px;
+    border-radius: 50%;
     color: white;
     cursor: pointer;
     padding: 8px;
