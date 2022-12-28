@@ -363,15 +363,16 @@ export default {
   }
 
 .vue-fab-extended-icons {
+  position: relative;
   width: initial;
 }
 
   .fab-extended-label{
-      position: absolute;
+      position: relative;
       z-index: 10000;
       color: white;
       top: 0;
-      left: 35px;
+      left: 5px;
       align-items: center;
       justify-content: flex-start;
       display: flex;
