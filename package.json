@@ -1,7 +1,7 @@
 {
-  "name": "vue-float-action-button",
+  "name": "vue-fab-extended",
   "version": "1.0.0",
-  "description": "vue, float action button",
+  "description": "vue, float action button, extended fab",
   "main": "dist/vue-fab.js",
   "scripts": {
     "test": "cross-env BABEL_ENV=test karma start ./test/unit/karma.conf.js",
