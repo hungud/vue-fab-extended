@@ -23,7 +23,7 @@
            :class="[active ? 'fab-active' : '', icon ]"
            data-outside="true">
         </i>
-        <label class="fab-extended-label">{{ label }}</label>
+        <label data-outside="true" class="fab-extended-label">{{ label }}</label>
       </fab-cantainer>
     </transition>
     <div v-click-outside="clickoutside"
@@ -358,9 +358,12 @@ export default {
     justify-content: flex-start;
   }
 
+  .fab-cantainer-extended .fabMask{    
+    border-radius: 25px;
+  }
+
 .vue-fab-extended-icons {
-    justify-content: flex-start;
-    left: 10px;
+  width: initial;
 }
 
   .fab-extended-label{
