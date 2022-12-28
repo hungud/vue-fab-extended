@@ -1,6 +1,6 @@
 {
   "name": "vue-float-action-button",
-  "version": "0.7.9",
+  "version": "1.0",
   "description": "vue, float action button",
   "main": "dist/vue-fab.js",
   "scripts": {
@@ -13,21 +13,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/a62527776a/vue-floating-action-button.git"
+    "url": "git+https://github.com/hungud/vue-fab-extended.git"
   },
   "keywords": [
     "vue",
-    "floating action button"
+    "floating action button",
+    "extended fab"
   ],
   "publishConfig": {
     "access": "public"
   },
-  "author": "chenyu <a13868300128a@gmail.com>",
-  "license": "ISC",
+  "author": "hungud <hungudgm@gmail.com>",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/a62527776a/vue-floating-action-button/issues"
+    "url": "https://github.com/hungud/vue-fab-extended/issues"
   },
-  "homepage": "https://github.com/a62527776a/vue-floating-action-button#readme",
+  "homepage": "https://github.com/hungud/vue-fab-extended#readme",
   "devDependencies": {
     "@vuepress/plugin-google-analytics": "^1.0.0-rc.1",
     "babel": "^6.23.0",
