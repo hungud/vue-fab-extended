@@ -1,4 +1,5 @@
 import FAB from './fab.vue'
+import FABExtended from './fab-extended.vue'
 import FABItem from './fab-item.vue'
 import FABCantainer from './fab-cantainer.vue'
 import { testSafariBrower, handleSafariBodyClickNotWorkEvent, listenClick } from './util'
@@ -8,6 +9,7 @@ function install (Vue, options) {
     FAB.props.iconType.default = options.iconType
   }
   Vue.component(FAB.name, FAB)
+  Vue.component(FABExtended.name, FABExtended)
   Vue.component(FABItem.name, FABItem)
   Vue.component(FABCantainer.name, FABCantainer)
   Vue.directive('click-outside', {

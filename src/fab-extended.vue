@@ -4,7 +4,7 @@
       <fab-cantainer
           @click.native="openMenu"
           v-if="hidden"
-          class="fab"
+          class="fab fab-cantainer-extended"
           data-outside="true"
           :class="'fab-size-' + size"
           :style="fabClass">
@@ -14,15 +14,16 @@
           data-outside="true"
           :key="activeIcon === icon ? icon : active"
           :class="{ 'fab-active' : active }"
-          class="vue-fab-material-icons material-icons">{{activeIcon === icon ? icon : active ? activeIcon : icon}}</i>
+          class="vue-fab-material-icons vue-fab-extended-icons material-icons">{{activeIcon === icon ? icon : active ? activeIcon : icon}}</i>
         </transition>
         <i v-if="iconType === 'iconfont'"
            @click.stop="openMenu"
-           class="icons iconfont vue-fab-material-icons vue-fab-iconfont-icons"
+           class="icons iconfont vue-fab-material-icons vue-fab-extended-icons vue-fab-iconfont-icons"
            style="font-size: 15px"
            :class="[active ? 'fab-active' : '', icon ]"
            data-outside="true">
         </i>
+        <label class="fab-extended-label">{{ label }}</label>
       </fab-cantainer>
     </transition>
     <div v-click-outside="clickoutside"
@@ -37,13 +38,17 @@
 import handleClass from './util'
 
 export default {
-  name: 'vue-fab',
+  name: 'vue-fab-extended',
   props: {
     unfoldDirection: {
       type: String,
       default: 'up'
     },
     icon: {
+      type: String,
+      default: 'add'
+    },
+    label:{
       type: String,
       default: 'add'
     },
@@ -342,5 +347,30 @@ export default {
     box-sizing: border-box;
     .absolute();
   }
+
+  .fab-cantainer-extended{    
+    border-radius: 25px;
+    justify-content: flex-start;
+  }
+
+.vue-fab-extended-icons {
+    justify-content: flex-start;
+    left: 10px;
+}
+
+  .fab-extended-label{
+      position: absolute;
+      z-index: 10000;
+      color: white;
+      top: 0;
+      left: 35px;
+      align-items: center;
+      justify-content: flex-start;
+      display: flex;
+      height: 100%;
+      font-weight: bold;
+  }
+
+
 
 </style>
