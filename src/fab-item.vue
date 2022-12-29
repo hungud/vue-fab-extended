@@ -62,6 +62,14 @@ export default {
     titleAlign:{
       type: String,
       default: 'left'
+    },
+    titleTextAlign:{
+      type: String,
+      default: 'center'
+    },
+    titleWidth:{
+      type: String,
+      default: ''
     }
   },
   computed: {
@@ -112,9 +120,11 @@ export default {
     },
     titleStyle: function () {
       
+      let titleStyleObj = {};
+      
       if (this.titleAlign == 'right')
       {
-        return {
+        titleStyleObj = {
           color: this.titleColor,
           background: this.titleBgColor,
           left: '4em',
@@ -123,11 +133,21 @@ export default {
       }
       else
       {
-        return {
+        titleStyleObj = {
           color: this.titleColor,
           background: this.titleBgColor
         }
       }
+
+      if (this.titleTextAlign.length > 0) {
+          titleStyleObj.textAlign = this.titleTextAlign;
+      }
+
+      if (this.titleWidth.length > 0) {
+          titleStyleObj.width = this.titleWidth;
+      }
+
+      return titleStyleObj;
     }
   },
   methods: {
