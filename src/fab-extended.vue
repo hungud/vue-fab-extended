@@ -374,6 +374,7 @@ export default {
       display: flex;
       height: 100%;
       font-weight: bold;
+      cursor: pointer;
   }
 
 
