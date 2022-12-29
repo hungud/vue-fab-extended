@@ -1,6 +1,6 @@
 {
   "name": "vue-fab-extended",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "vue, float action button, extended fab",
   "main": "dist/vue-fab.js",
   "scripts": {

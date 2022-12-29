@@ -58,6 +58,10 @@ export default {
     titleBgColor: {
       type: String,
       default: 'white'
+    },
+    titleAlign:{
+      type: String,
+      default: 'left'
     }
   },
   computed: {
@@ -107,9 +111,22 @@ export default {
       return animateModel[this.$parent.fabItemAnimate]
     },
     titleStyle: function () {
-      return {
-        color: this.titleColor,
-        background: this.titleBgColor
+      
+      if (this.titleAlign == 'right')
+      {
+        return {
+          color: this.titleColor,
+          background: this.titleBgColor,
+          left: '4em',
+          right: 'initial',
+        }  
+      }
+      else
+      {
+        return {
+          color: this.titleColor,
+          background: this.titleBgColor
+        }
       }
     }
   },
